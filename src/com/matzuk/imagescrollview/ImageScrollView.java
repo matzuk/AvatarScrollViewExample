@@ -116,6 +116,7 @@ public class ImageScrollView extends ScrollView {
 		return super.performClick();
 	}
 	
+	// save point after user finger down
 	private void setBeginningPoint(float y) {
 		beginningMovingY = y;
 		resizableScreenHeight = viewHeight;
