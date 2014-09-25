@@ -1,0 +1,31 @@
+<resources
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:mttphone="http://schemas.android.com/apk/res/com.matzuk.imagescrollview" >
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light">
+        
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <item name="android:actionBarStyle">@style/action_bar</item>
+        <item name="actionBarStyle">@style/action_bar</item>
+    </style>
+    
+    <style name="action_bar"
+           parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@color/sv_violet</item>
+        <item name="background">@color/sv_violet</item>
+        <item name="android:titleTextStyle">@style/actionbar_title_light</item>
+     	<item name="titleTextStyle">@style/actionbar_title_light</item>
+    </style>
+    
+    <style name="actionbar_title_light">
+        <item name="android:textColor">@color/white</item>
+		<item name="android:textSize">18dp</item>
+    </style>
+
+</resources>

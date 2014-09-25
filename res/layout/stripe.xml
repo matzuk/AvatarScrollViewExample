@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="4dp"
+    android:orientation="horizontal" >
+
+    <FrameLayout
+        android:id="@+id/blue_rect"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/sv_blue" >
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/orange_rect"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/sv_orange" >
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/green_rect"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/sv_green" >
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/yellow_rect"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/sv_yellow" >
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/violet_rect"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/sv_violet" >
+    </FrameLayout>
+
+</LinearLayout>

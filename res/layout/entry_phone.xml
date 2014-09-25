@@ -1,0 +1,130 @@
+<RelativeLayout
+	 xmlns:android="http://schemas.android.com/apk/res/android"
+	 android:layout_width="match_parent"
+	 android:layout_height="wrap_content"
+	 android:orientation="horizontal">
+	 
+    <LinearLayout
+        android:id="@+id/beam_contact_info_fragment_entry_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+		android:paddingBottom="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/beam_contact_info_fragment_entry_sms"
+        android:orientation="horizontal" >
+    
+	    <ImageView
+		 	android:id="@+id/beam_contact_info_fragment_entry_image_phone"
+		    android:layout_width="36dp"
+		    android:layout_height="36dp"
+		    android:layout_gravity="center"
+		    android:src="@drawable/sv_call" />
+	    
+	    <LinearLayout 
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:paddingLeft="5dp"
+		    android:orientation="vertical">
+		    
+	        <LinearLayout 
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:gravity="center"
+			    android:orientation="horizontal">
+	    
+			    <TextView
+				    android:id="@+id/beam_contact_info_fragment_entry_text_phone"    
+				    android:textColor="@color/type_color" 
+				    android:textSize="15sp"  
+				    android:layout_width="fill_parent"
+				    android:layout_height="wrap_content"
+				    android:layout_gravity="center"		    
+				    android:text="+7(495)123 4567" />
+			      
+			    <ImageView
+				 	android:id="@+id/beam_contact_info_fragment_entry_image_fav"
+				    android:layout_width="18dip"
+				    android:layout_height="18dip"
+				    android:layout_gravity="center"
+				    android:layout_marginLeft="4dip"
+				    android:src="@drawable/sv_favorite_star" />
+		    	
+		    </LinearLayout>
+
+	        <TextView
+		            android:id="@+id/beam_contact_info_fragment_entry_text_type"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="mobile"
+		            android:textColor="@color/type_color" 
+		            android:textSize="13sp" />
+	        
+	        <TextView
+				android:id="@+id/beam_contact_info_fragment_entry_text_cost"    
+				android:textColor="@color/black"
+				android:textSize="14sp"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" 
+				android:text="1.99 euro" />
+		    
+		 </LinearLayout>
+	 
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/beam_contact_info_fragment_entry_sms"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/beam_contact_info_fragment_entry_phone"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/beam_contact_info_fragment_entry_phone"
+        android:paddingTop="10dp"
+		android:paddingBottom="10dp"
+        android:orientation="horizontal"
+        android:paddingRight="4dp" >
+	    
+        <FrameLayout
+	        android:id="@+id/beam_contact_fragment_divider_line"
+	        android:layout_width="1dp"
+	        android:layout_height="match_parent"
+	        android:background="@color/list_divider" >
+  		</FrameLayout>
+  		
+        <LinearLayout
+	        android:id="@+id/beam_contact_info_fragment_entry_ll3"
+	        android:layout_width="fill_parent"
+        	android:layout_height="fill_parent"
+	        android:orientation="vertical"
+	        android:gravity="center"
+	        android:paddingLeft="4dp" >
+	        
+	        <ImageView
+				android:id="@+id/beam_contact_info_fragment_entry_image_message"
+				android:layout_width="36dp"
+				android:layout_height="36dp"
+				android:src="@drawable/sv_sms" />
+	        
+	        <TextView
+	            android:id="@+id/beam_contact_info_fragment_entry_text_cost_message"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="free"
+	            android:textColor="@color/type_color" 
+	            android:textSize="12sp" />
+	        
+        </LinearLayout>
+	    
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/beam_contact_fragment_bottom_line"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_alignLeft="@+id/beam_contact_info_fragment_entry_phone"
+        android:layout_alignRight="@+id/beam_contact_info_fragment_entry_sms"
+        android:layout_below="@+id/beam_contact_info_fragment_entry_phone"
+        android:background="@color/list_divider" >
+    </FrameLayout>
+  
+</RelativeLayout>

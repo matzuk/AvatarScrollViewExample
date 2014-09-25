@@ -1,0 +1,122 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="${relativePackage}.${activityClass}" >
+	
+    <com.matzuk.imagescrollview.ImageScrollView
+        android:id="@+id/contact_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="4dp" >
+
+		<LinearLayout
+            android:id="@+id/beam_info_contact_fragment_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/beam_info_contact_fragment_ll2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <!-- ImageView at top and 
+                has android:layout_width="match_parent" 
+                and android:scaleType="centerCrop" 
+                -->
+                <ImageView
+                    android:id="@+id/contact_info_avatar"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"     
+                    android:scaleType="centerCrop"             
+        			android:src="@drawable/avatar" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/connection_quality"
+                android:maxLines="1"
+                android:textSize="13sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="Good quality" 
+                android:textColor="@color/white"
+                android:background="@color/sv_green"/>
+            
+            <LinearLayout
+                android:id="@+id/beam_contact_info_fragment_lchild"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical" >
+                
+                <TextView
+				    android:id="@+id/sv_header_text"
+				    android:textSize="16sp"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_marginBottom="2dp"
+				    android:text="Phones"
+				    android:textColor="@color/black"
+				    android:textStyle="bold" />
+
+			 	<include
+			        android:layout_width="fill_parent"
+			        android:layout_height="2dp"
+			        layout="@layout/stripe" />
+			 	
+			 	<include
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        layout="@layout/entry_phone" />
+			 	
+			 	<include
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        layout="@layout/entry_phone" />
+			 	
+			 	<include
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        layout="@layout/entry_phone" />
+			 	
+			 	<include
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        layout="@layout/entry_phone" />
+			 	
+			 	<include
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        layout="@layout/entry_phone" />
+			 	
+			 	<include
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        layout="@layout/entry_phone" />
+			 	
+			 	<include
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        layout="@layout/entry_phone" />
+			 	
+			 	<include
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        layout="@layout/entry_add_button" />
+                
+            </LinearLayout>
+        </LinearLayout>
+
+        
+	</com.matzuk.imagescrollview.ImageScrollView>        
+
+</RelativeLayout>
