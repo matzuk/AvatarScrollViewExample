@@ -1,33 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    
-    <color name="sv_main_bg">#FFFFFF</color>
     <color name="sv_blue">#74AADE</color>
     <color name="sv_orange">#FA9843</color>
     <color name="sv_green">#95BF63</color>
-    <color name="sv_green_button">#9DCA68</color>
-    <color name="sv_green_button_intense">#8BC04E</color>
     <color name="sv_yellow">#FFD34A</color>
-    <color name="sv_yellow_header">#FFCD35</color>
     <color name="sv_violet">#9873B4</color>
-    <color name="sv_violet_dark">#7A5C90</color>
-    <color name="sv_green_intense">#8EC351</color>
-    <color name="sv_blue_intense">#4D93D5</color>
-    <color name="sv_grey">#B5B5B5</color>
-    <color name="sv_grey_button">#949494</color>
-    <color name="sv_grey_button_intense">#878787</color>
-    <color name="sv_grey_dark">#636363</color>
-    <color name="sv_grey_disabled">#999999</color>
-    <color name="sv_grey_light">#D0D0D0</color>
-    <color name="sv_grey_halftransparent">#43EAEAEA</color>
-    <color name="sv_black_halftransparent">#D6000000</color>
-    <color name="sv_black_nearlytransparent">#10000000</color>
-    <color name="sv_white_halftransparent">#19FFFFFF</color>
-    <color name="sv_keypad_space">#FFFFFF</color>
-    <color name="sv_red">#E8536C</color>
-    <color name="sv_red_intense">#E33552</color>
-    <color name="sv_disabled_text_color">#ADADAD</color>
-    <color name="sv_text_color">#454545</color>
     <color name="white">#ffffffff</color>
     <color name="black">#ff000000</color>
     <color name="type_color">#8F8E8F</color>
