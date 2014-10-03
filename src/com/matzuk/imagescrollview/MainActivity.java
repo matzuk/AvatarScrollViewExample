@@ -6,7 +6,7 @@ import android.widget.ImageView;
 
 public class MainActivity extends Activity {
 	
-	private ImageScrollView mImageScrollView;
+	private AvatarScrollView mImageScrollView;
 	private ImageView avatar;
 
 	@Override
@@ -14,10 +14,10 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		// initialize ImageScrollView
-		mImageScrollView = (ImageScrollView) findViewById(R.id.contact_scroll_view);
+		mImageScrollView = (AvatarScrollView) findViewById(R.id.contact_scroll_view);
         // initialize ImageView
         avatar = (ImageView) findViewById(R.id.contact_info_avatar);
         // call setResizableImage function
-        mImageScrollView.setResizableImage(avatar);
+        mImageScrollView.setAvatar(avatar);
 	}
 }

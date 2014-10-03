@@ -5,7 +5,7 @@
     android:background="@color/white"
     tools:context="${relativePackage}.${activityClass}" >
 	
-    <com.matzuk.imagescrollview.ImageScrollView
+    <com.matzuk.imagescrollview.AvatarScrollView
         android:id="@+id/contact_scroll_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -109,6 +109,6 @@
         </LinearLayout>
 
         
-	</com.matzuk.imagescrollview.ImageScrollView>        
+	</com.matzuk.imagescrollview.AvatarScrollView>        
 
 </RelativeLayout>

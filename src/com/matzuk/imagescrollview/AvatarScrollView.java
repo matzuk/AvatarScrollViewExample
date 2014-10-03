@@ -15,16 +15,16 @@ import android.widget.ScrollView;
 /**
  * @author EMatsuk
  * 
- * ImageScrollView is ScrollView with ONLY Top Scretchable (or Cropped) Image
+ * AvatarScrollView is ScrollView with ONLY Top Scretchable (or Cropped) Image
  * 	 for info screens where developer places photo, phones, mails and other details about contact
- * Develeper must initialize ImageScrollView, ImageView and 
- * 	 must call function ImageScrollView.setResizableImage(ImageView)
- * So you can call ImageScrollView.setEnableAnimation(boolean) for on/off animation
+ * Develeper must initialize AvatarScrollView, ImageView and 
+ * 	 must call function AvatarScrollView.setResizableImage(ImageView)
+ * So you can call ImageScrollView.enableAnimation(boolean) for on/off animation
  * Attention! Your ImageView must be at top of ScrollView (internal layout), has scaleType = "centerCrop" and layoutWidth = "match_parent"
  *    
  */
 
-public class ImageScrollView extends ScrollView {
+public class AvatarScrollView extends ScrollView {
 	
 	// Animation duration (when user up finger)
 	private static final int DURATION = 200;
@@ -58,28 +58,28 @@ public class ImageScrollView extends ScrollView {
 	private boolean firstParams = true;
 	private boolean animate = true;
 
-	public ImageScrollView(Context context) {
+	public AvatarScrollView(Context context) {
 		super(context);
 	}
 	
-	public ImageScrollView(Context context, AttributeSet attrs) {
+	public AvatarScrollView(Context context, AttributeSet attrs) {
 		super(context, attrs);
 	}
 	
-	public ImageScrollView(Context context, AttributeSet attrs, int defStyle) {
+	public AvatarScrollView(Context context, AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);
 	}
 	
 	
-	public void setResizableImage(ImageView avatar) {
+	public void setAvatar(ImageView avatar) {
 		this.avatar = avatar;
 	}
 	
-	public void setEnableAnimation(boolean b) {
+	public void enableAnimation(boolean b) {
 		animate = b;
 	}
 	
-	private void setParams() {
+	private void moveAction() {
 		if (avatar == null) {
 			throw new RuntimeException("Null Resizable Image!");
 		}
@@ -106,7 +106,7 @@ public class ImageScrollView extends ScrollView {
 		viewHeight = MeasureSpec.getSize(heightMeasureSpec);		
 	    super.onMeasure(widthMeasureSpec, heightMeasureSpec);
 	    if (firstParams) {
-	    	setParams();
+	    	moveAction();
 	    	firstParams = false;
 	    }
 	}
