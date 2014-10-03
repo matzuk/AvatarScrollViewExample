@@ -18,24 +18,16 @@
             android:layout_height="match_parent"
             android:orientation="vertical" >
 
-            <LinearLayout
-                android:id="@+id/beam_info_contact_fragment_ll2"
+            <!-- ImageView at top and 
+            has android:layout_width="match_parent" 
+            and android:scaleType="centerCrop" 
+            -->
+            <ImageView
+            	android:id="@+id/contact_info_avatar"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal" >
-
-                <!-- ImageView at top and 
-                has android:layout_width="match_parent" 
-                and android:scaleType="centerCrop" 
-                -->
-                <ImageView
-                    android:id="@+id/contact_info_avatar"
-                    android:layout_width="match_parent"
-                    android:layout_height="150dp"     
-                    android:scaleType="centerCrop"             
-        			android:src="@drawable/avatar" />
-
-            </LinearLayout>
+                android:layout_height="150dp"     
+                android:scaleType="centerCrop"             
+        		android:src="@drawable/avatar" />
 
             <TextView
                 android:id="@+id/connection_quality"
