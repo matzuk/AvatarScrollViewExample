@@ -1,15 +1,18 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.matzuk.avatarscrollview"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
     tools:context="${relativePackage}.${activityClass}" >
 	
-    <com.matzuk.imagescrollview.ImageScrollView
+    <com.matzuk.avatarscrollview.AvatarScrollView
         android:id="@+id/contact_scroll_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        custom:avatar_height="150dp"
+        custom:avatar_source="@drawable/avatar"
         android:paddingBottom="4dp" >
 
 		<LinearLayout
@@ -18,24 +21,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical" >
 
-            <LinearLayout
-                android:id="@+id/beam_info_contact_fragment_ll2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal" >
-
-                <!-- ImageView at top and 
-                has android:layout_width="match_parent" 
-                and android:scaleType="centerCrop" 
-                -->
-                <ImageView
-                    android:id="@+id/contact_info_avatar"
-                    android:layout_width="match_parent"
-                    android:layout_height="150dp"     
-                    android:scaleType="centerCrop"             
-        			android:src="@drawable/avatar" />
-
-            </LinearLayout>
+            
 
             <TextView
                 android:id="@+id/connection_quality"
@@ -117,6 +103,6 @@
         </LinearLayout>
 
         
-	</com.matzuk.imagescrollview.ImageScrollView>        
+	</com.matzuk.avatarscrollview.AvatarScrollView>        
 
 </RelativeLayout>

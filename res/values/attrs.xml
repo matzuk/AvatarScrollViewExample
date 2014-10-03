@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <declare-styleable name="AvatarScrollView">
+        <attr name="avatar_height" format="dimension" />
+        <attr name="avatar_source" format="reference" />
+    </declare-styleable>
+    
+</resources>

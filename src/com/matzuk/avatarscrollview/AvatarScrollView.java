@@ -1,15 +1,22 @@
-package com.matzuk.imagescrollview;
+package com.matzuk.avatarscrollview;
 
 import android.content.Context;
 import android.content.pm.ActivityInfo;
+import android.content.res.ColorStateList;
+import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
+import android.util.Log;
+import android.util.TypedValue;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.Transformation;
 import android.widget.ImageView;
+import android.widget.ImageView.ScaleType;
+import android.widget.LinearLayout;
 import android.widget.ScrollView;
 
 /**
@@ -24,7 +31,7 @@ import android.widget.ScrollView;
  *    
  */
 
-public class ImageScrollView extends ScrollView {
+public class AvatarScrollView extends ScrollView {
 	
 	// Animation duration (when user up finger)
 	private static final int DURATION = 200;
@@ -57,29 +64,68 @@ public class ImageScrollView extends ScrollView {
 	
 	private boolean firstParams = true;
 	private boolean animate = true;
-
-	public ImageScrollView(Context context) {
-		super(context);
-	}
 	
-	public ImageScrollView(Context context, AttributeSet attrs) {
+	public AvatarScrollView(Context context, AttributeSet attrs) {
 		super(context, attrs);
+		loadCustomAttrs(context, attrs);
+		createLayoutInScrollView(context);
 	}
 	
-	public ImageScrollView(Context context, AttributeSet attrs, int defStyle) {
+	public AvatarScrollView(Context context, AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);
-	}
+		loadCustomAttrs(context, attrs);
+		createLayoutInScrollView(context);
+	}	
 	
-	
-	public void setResizableImage(ImageView avatar) {
+	public void cancelCenterCropAvatar(ImageView avatar) {
 		this.avatar = avatar;
 	}
 	
-	public void setEnableAnimation(boolean b) {
+	public void enableAnimation(boolean b) {
 		animate = b;
 	}
 	
-	private void setParams() {
+	private void createLayoutInScrollView(Context context) {
+		
+		LinearLayout linLayout = new LinearLayout(context);
+		linLayout.setOrientation(LinearLayout.VERTICAL);
+		LayoutParams linLayoutParam = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
+		linLayout.setLayoutParams(linLayoutParam);
+		linLayout.addView(avatar, 0);
+		Log.v("count1", String.valueOf(this.getChildCount()));
+		for (int i = 0; i < getChildCount(); i++) {
+			linLayout.addView(getChildAt(i), i + 1);
+		}
+		removeAllViews();
+		Log.v("count2", String.valueOf(this.getChildCount()));
+		addView(linLayout);
+		
+		
+		
+	}
+	
+	private void loadCustomAttrs(Context context, AttributeSet attrs) {
+		
+		TypedArray a = context.obtainStyledAttributes(attrs,
+		        R.styleable.AvatarScrollView, 0, 0
+		);
+		Drawable avatarDrawable = a.getDrawable(R.styleable.AvatarScrollView_avatar_source);
+		int avatarHeight = a.getDimensionPixelSize(R.styleable.AvatarScrollView_avatar_height, -1);
+		
+		avatar = new ImageView(context);
+		avatar.setImageDrawable(avatarDrawable);
+		
+		LayoutParams linLayoutParam = new LayoutParams(LayoutParams.MATCH_PARENT, avatarHeight);
+		//lParams.height = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_PX, params.getDividerLineHeight(), getResources().getDisplayMetrics());
+		//lParams.height = avatarHeight;
+		avatar.setLayoutParams(linLayoutParam);
+		avatar.setScaleType(ScaleType.CENTER_CROP);
+		
+		a.recycle();	
+
+	}
+	
+	private void moveAction() {
 		if (avatar == null) {
 			throw new RuntimeException("Null Resizable Image!");
 		}
@@ -106,7 +152,7 @@ public class ImageScrollView extends ScrollView {
 		viewHeight = MeasureSpec.getSize(heightMeasureSpec);		
 	    super.onMeasure(widthMeasureSpec, heightMeasureSpec);
 	    if (firstParams) {
-	    	setParams();
+	    	moveAction();
 	    	firstParams = false;
 	    }
 	}
